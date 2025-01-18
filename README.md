@@ -1,2 +1,2 @@
-# This is POWERIQ
-# We created LLM-Based Energy Contract Risk Detector
+## This is POWERIQ
+## LLM-Based Energy Contract Risk Detector
