@@ -57,11 +57,21 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 app.use(cors());
 
-app.get('/evaluate', async (req, res) => {
+app.post('/evaluate', async (req, res) => {
+  const contractText = req.body.text;
   try {
-    const contractText = fs.readFileSync("contract2.txt", "utf-8");
+    // const contractText = fs.readFileSync("contract2.txt", "utf-8");
     const analysis = await evaluateRisk(contractText);
     res.json({ data: analysis });
+    // res.json({ data: {
+    //   "risks": {
+    //   "forceMajeure": "low risk",
+    //   "termination": "low risk",
+    //   "pricing": "low risk",
+    //   "performance": "low risk"
+    // },
+    // "overallRisk": "low risk"
+    // } });
   } catch (error) {
     console.error("Error reading or analyzing contract:", error);
     return null;
