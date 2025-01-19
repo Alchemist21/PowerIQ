@@ -6,3 +6,5 @@
 ### 2. Sends file to back end via API Call
 ### 3. Process the Uploaded File to Extract Text. Uses OpenAI to analyze Key clauses for Risk 
 ### 4. Results are then displayed
+
+### View the project at https://poweriq.netlify.app/
